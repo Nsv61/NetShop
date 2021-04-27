@@ -9,7 +9,6 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 def test_btn_basket_exist(browser):
     browser.get(link)
-    time.sleep(30)
-    # btn btn-lg btn-primary btn-add-to-basket
+    time.sleep(10)  # 30 сек очень долго ждать, поставил 10
     button = browser.find_element_by_css_selector('.btn-add-to-basket')
     assert button != None
